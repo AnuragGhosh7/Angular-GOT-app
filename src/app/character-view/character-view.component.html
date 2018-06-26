@@ -1,0 +1,38 @@
+<ngx-spinner></ngx-spinner>
+<div class="container">
+  <div class="row text-center">
+    <div class="col-12 text-center">
+      <br>
+      <br>
+      <h1>Character Details</h1>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-12">
+      <p>Character Name : {{currentCharacterView.name ? currentCharacterView.name : 'Not Available'}}</p>
+      <hr>
+      <p>Gender : {{currentCharacterView.gender ?currentCharacterView.gender:'Not Available'}}</p>
+      <hr>
+      <p>Culture : {{currentCharacterView.culture ?currentCharacterView.culture:'Not Available'}}</p>
+      <hr>
+      <p>Born on : {{currentCharacterView.born ?currentCharacterView.born:'Not Available'}}</p>
+      <hr>
+      <p>Date of Death : {{currentCharacterView.died ?currentCharacterView.died:'Not Available'}}</p>
+      <hr>
+      <p>Father's Name : {{currentCharacterView.father ?currentCharacterView.father:'Not Available'}}</p>
+      <hr>
+      <p>Mother's Name : {{currentCharacterView.mother ?currentCharacterView.mother:'Not Available'}}</p>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-12 " style="align-items: center">
+      <br>
+      <a class="btn btn-warning" (click)='goBackToPrevious()'>Go Back</a>
+    </div>
+  </div>
+</div>

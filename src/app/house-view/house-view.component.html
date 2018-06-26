@@ -1,0 +1,28 @@
+<ngx-spinner></ngx-spinner>
+<div class='container margin'>
+  <div class='row text-center'>
+    <div class='col-12'>
+      <h1>House details </h1>
+      <br>
+      <p class='book'>Name: {{currentHouseView.name | uppercase }}</p>
+      <hr>
+      <p class='book'>Region: {{currentHouseView.region }}</p>
+      <hr>
+      <p class='book'>CoatOfArms: {{currentHouseView.coatOfArms }}</p>
+      <hr>
+      <p class='book'>Words: {{currentHouseView.words ?currentHouseView.words:'Not Available' }}</p>
+      <hr>
+      <p *ngIf='currentHouseView.titles.length>0' class='book'>Titles:
+        <span *ngFor='let title of currentHouseView.titles;let first=first;let last=last'>{{title?title:'Not Available'}}{{last ? '' : ', '}}</span>
+      </p>
+      <hr>
+      <p *ngIf='currentHouseView.seats.length>0' class='book'>Seats:
+        <span *ngFor='let seat of currentHouseView.seats;let first=first;let last=last'>{{seat?seat:'Not Available'}}{{last ? '' : ', '}}</span>
+      </p>
+
+      <a class='btn btn-danger' (click)='goBackToPrevious()'>Go Back</a>
+
+
+    </div>
+  </div>
+</div>

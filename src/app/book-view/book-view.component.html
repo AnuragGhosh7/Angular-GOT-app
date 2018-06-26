@@ -1,0 +1,41 @@
+<ngx-spinner></ngx-spinner>
+  <div class="container">
+    <div class="row text-center" *ngIf="currentBookView">
+     <div class="col-12">
+        <h1>Book details </h1>
+  
+        <p class="">released by {{currentBookView.release | date }}</p>
+        <br>
+        <br>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-12">
+        <p>Book Name: {{currentBookView.name ?currentBookView.name:'Not Available'}}</p>
+        <hr>
+        <p *ngIf="currentBookView.authors.length>0"> Authors:
+          <span *ngFor="let author of currentBookView.authors">{{author}}</span>
+        </p>
+        <hr>
+        <p>Isbn: {{currentBookView.isbn}}</p>
+        <hr>
+        <p>Number Of Pages: {{currentBookView.numberOfPages}}</p>
+        <hr>
+        <p>Publisher: {{currentBookView.publisher}}</p>
+        <hr>
+        <p>Country: {{currentBookView.country}}</p>
+        <hr>
+        <p>Media Type: {{currentBookView.mediaType}}</p>
+        <hr>
+      </div>
+    </div>
+  
+    
+  
+    <div class="row text-center">
+      <div class="col-12 " style="align-items: center">
+        <a class="btn btn-success" (click)='goBackToPrevious()'>Go Back</a>
+      </div>
+    </div>
+  
+  </div>

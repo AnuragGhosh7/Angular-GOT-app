@@ -1,0 +1,31 @@
+body {
+    background-color: grey;
+}
+
+@media screen and (max-width: 480px) {
+.book-img{
+width: 400%;
+height: 40%;
+}
+}
+
+
+/*.book-img{
+    width: 35vw;
+     height: 40vh;
+}*/
+
+@media screen and (max-width: 1500px){
+    .book-img{
+        width: 38vw;
+        height: 47vh;
+        }   
+}
+
+.line-color {
+    color: black;
+}
+
+.font-style{
+    font-family: 'Spirax', cursive;
+}
